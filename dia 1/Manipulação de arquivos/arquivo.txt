@@ -1,0 +1,3 @@
+Ola mundo!Minicurso 
+Automatizando tarefas maçantes com python 
+Manipulação de arquivos 
