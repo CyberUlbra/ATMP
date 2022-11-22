@@ -6,7 +6,7 @@ soup = BeautifulSoup(baixa.text, 'html.parser')
 url_img = soup.select('div#comic img')[0]['src']
 download_url = "https:{}".format(url_img)
 
-print("bainxando: {} ...".format(download_url))
+print("baixando: {} ...".format(download_url))
 
 with open('xkcd-scrapped.png', 'wb') as image: 
     image.write(requests.get(download_url).content)
