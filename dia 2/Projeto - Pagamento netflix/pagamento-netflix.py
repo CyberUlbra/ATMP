@@ -3,7 +3,10 @@ from email.message import Message
 import smtplib
 
 lista_amigos = []
-corpo_email = open('index.html', 'r', encoding='utf-8').read()
+corpo_email = ''
+
+with open('index.html', 'r', encoding='utf-8') as index:
+    corpo_email = index.read()
 
 def recuperarEmail(nome_arquivo):
     arquivo = open(nome_arquivo)
@@ -20,7 +23,7 @@ def enviar_email_smtp(corpo_email_envio, email_to):
     mensagem['Subject'] = "Pagamento Netflix"
     mensagem['From'] = 'minicursoatmp@gmail.com'
     mensagem['To'] = email_to
-    password = 'senha' 
+    password = 'nfyxlojkjrnpjhws' 
     mensagem.add_header('Content-Type', 'text/html')
     mensagem.set_payload(corpo_email_envio)
 
